@@ -16,6 +16,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "ElementPlus",
     component: () => import("@/views/element-plus.vue"),
   },
+  {
+    path: "/axios",
+    name: "Axios",
+    component: () => import("@/views/axios.vue"),
+  },
 ];
 
 const router = createRouter({

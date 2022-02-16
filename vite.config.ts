@@ -3,7 +3,7 @@ import vue from "@vitejs/plugin-vue";
 // 提示找不到 path, 安装@types/node 声明文件 `npm i -D @types/node`
 import { resolve } from "path";
 
-const isProd = ["production"].indexOf(process.env.NODE_ENV);
+const isProd = ["production"].includes(process.env.NODE_ENV);
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -22,12 +22,12 @@ export default defineConfig({
     cors: true, // 允许跨域
     /** 设置代理*/
     proxy: {
-      // "/api": {
-      //   target: "http://xxx.xxx.xxx.xxx:8000",
-      //   changeOrigin: true,
-      //   secure: false,
-      //   rewrite: (path) => path.replace("/api/", "/"),
-      // },
+      "/api": {
+        target: "http://127.0.0.1:9002",
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace("/api/", "/"),
+      },
     },
   },
   /** 设置预处理样式*/

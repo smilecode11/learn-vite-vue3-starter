@@ -4,10 +4,14 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
+    "prod": "vite --mode production",
     "build": "vue-tsc --noEmit && vite build",
+    "build:dev": "vue-tsc --noEmit && vite build --mode development",
+    "build:prod": "vue-tsc --noEmit && vite build --mode production",
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^0.26.0",
     "vue": "^3.2.25",
     "vue-router": "^4.0.12"
   },
