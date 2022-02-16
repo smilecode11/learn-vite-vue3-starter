@@ -21,6 +21,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "Axios",
     component: () => import("@/views/axios.vue"),
   },
+  {
+    path: "/scss",
+    name: "Scss",
+    component: () => import("@/views/scss.vue"),
+  },
 ];
 
 const router = createRouter({
