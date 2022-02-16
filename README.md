@@ -45,3 +45,12 @@
 ## 代码规范
 
 ### 集成 EditorConfig 配置
+* 增加 .editorconfig 文件
+* 下载 VSCode 插件 EditorConfig for VS Code
+
+### 集成 Prettier 配置
+* 安装 `npm i prettier -D`
+* 创建 Prettier 配置文件, 配置
+* 下载 VSCode 插件 Prettier - Code formatter
+
+### 集成 ESLint 配置
