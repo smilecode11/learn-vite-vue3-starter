@@ -11,6 +11,11 @@ const routes: Array<RouteRecordRaw> = [
     name: "HomePage",
     component: Home,
   },
+  {
+    path: "/element-plus",
+    name: "ElementPlus",
+    component: () => import("@/views/element-plus.vue"),
+  },
 ];
 
 const router = createRouter({
