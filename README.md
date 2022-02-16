@@ -43,3 +43,5 @@
 * npm i -D stylus
 
 ## 代码规范
+
+### 集成 EditorConfig 配置
