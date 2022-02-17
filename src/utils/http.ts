@@ -8,11 +8,11 @@ const axiosInstance = Axios.create({
   timeout: 30000
 })
 
-/** 请求拦截*/
+/** 请求拦截 */
 axiosInstance.interceptors.request.use(
   (config) => {
     // console.log(config);
-    /** 根据项目实际情况处理 config*/
+    /** 根据项目实际情况处理 config */
     //    code...
     return config
   },
@@ -21,10 +21,10 @@ axiosInstance.interceptors.request.use(
   }
 )
 
-/** 响应拦截*/
+/** 响应拦截 */
 axiosInstance.interceptors.response.use(
   (response) => {
-    /** 根据项目实际情况处理 response*/
+    /** 根据项目实际情况处理 response */
     //    code...
     return response
   },

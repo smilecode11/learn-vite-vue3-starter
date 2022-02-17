@@ -5,15 +5,15 @@
 </template>
 
 <script lang="ts">
-// import HelloWorld from "@/components/HelloWorld.vue";
-import HelloWorld from "@/components/HelloWorld.vue";
+import HelloWorld from '@/components/HelloWorld.vue'
 
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue'
+
 export default defineComponent({
   components: {
-    HelloWorld,
-  },
-});
+    HelloWorld
+  }
+})
 </script>
 
 <style></style>

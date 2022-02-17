@@ -29,7 +29,6 @@ export default defineComponent({
       axios
         .get('/api/category/get')
         .then((resp) => {
-          console.log('resp', resp)
           axiosRet.resp = resp
         })
         .catch((error) => {

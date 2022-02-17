@@ -8,8 +8,7 @@
     "build": "vue-tsc --noEmit && vite build",
     "build:dev": "vue-tsc --noEmit && vite build --mode development",
     "build:prod": "vue-tsc --noEmit && vite build --mode production",
-    "preview": "vite preview",
-    "lint": "eslint --fix"
+    "preview": "vite preview"
   },
   "dependencies": {
     "axios": "^0.26.0",
