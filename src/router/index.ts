@@ -25,6 +25,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/scss',
     name: 'Scss',
     component: () => import('@/views/scss.vue')
+  },
+  {
+    path: '/test',
+    name: 'TestUtil',
+    component: () => import('@/views/my-test.vue')
   }
 ]
 

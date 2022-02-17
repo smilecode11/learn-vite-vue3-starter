@@ -11,14 +11,14 @@
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
     // volar 支持指定全局组件类型
-    "types": ["element-plus/global"],
+    "types": ["element-plus/global", "jest"],
     "baseUrl": ".", // 用于设置解析非相对模块名称的基本目录，相对模块不会受到baseUrl的影响
     "paths": { // 用于设置模块名到基于baseUrl的路径映射
       "@/*": ["src/*"]
     },
-    "skipLibCheck": true  //  vite 打包 ElementPlus 报错
+    "skipLibCheck": true //  vite 打包 ElementPlus 报错
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "tests/**/*.ts"],
   "references": [{
     "path": "./tsconfig.node.json"
   }]

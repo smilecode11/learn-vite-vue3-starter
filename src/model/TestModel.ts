@@ -1,11 +1,5 @@
-import http from '@/utils/http'
-import { test } from './apis/index'
+// import http from '@/utils/http'
 
-class TestModel {
-  /** 获取列表 */
-  getList() {
-    return http.get(test.getList)
-  }
-}
+class TestModel {}
 
 export default TestModel

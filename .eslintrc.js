@@ -8,7 +8,8 @@ module.exports = {
     // 'plugin:vue/essential',
     'plugin:vue/vue3-essential',
     'airbnb-base',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
+    'plugin:jest/recommended'
   ],
   parserOptions: {
     ecmaVersion: '12',
@@ -47,8 +48,7 @@ module.exports = {
       //  开发依赖
       'error',
       {
-        devDependencies: ['**vite**', '**@vitejs**'],
-        optionalDependencies: false
+        devDependencies: ['**vite**', '**@vitejs**', '@vue/test-utils']
       }
     ],
     'import/extensions': ['off'] //  引入文件扩展名校验

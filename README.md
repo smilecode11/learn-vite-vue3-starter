@@ -3,7 +3,7 @@
 
 ## 项目结构目录
 |-public
-|-src/
+|-src/ 
     |-assets/   静态资源目录
     |-common/   通用类库目录
     |-components/   公共组件目录
@@ -105,3 +105,54 @@
   module.exports = { extends: ['@commitlint/config-conventional'] }
   ```
 * 使用 husky 的 commit-msg hook 触发验证提交信息的命令
+
+## 单元测试
+* 安装依赖 `npm i @vue/test-utils@next jest vue-jest@next ts-jest -D`
+* 创建文件 jest.config.js
+  ```
+  module.exports = {
+    moduleFileExtensions: ['vue', 'js', 'ts'],
+    preset: 'ts-jest',
+    testEnvironment: 'jsdom',
+    transform: {
+      '^.+\\.vue$': 'vue-jest', // vue 文件用 vue-jest 转换
+      '^.+\\.ts$': 'ts-jest' // ts 文件用 ts-jest 转换
+    },
+    // 匹配 __tests__ 目录下的 .js/.ts 文件 或其他目录下的 xx.test.js/ts xx.spec.js/ts
+    testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(ts)$'
+  }
+  ```
+* 创建 tests 目录, 进行 Test.spec.ts 组件测试
+### 集成 @types/jest
+* 安装依赖 `npm i @types/jest -D`
+* 修改 ts.config.json
+  ```
+  {
+    "compilerOptions": {
+      ...
+      "types": ["vite/client", "jest"]
+    },
+  }
+  ```
+### 添加 eslint-plugin-jest
+* 安装依赖 `npm i eslint-plugin-jest -D`
+* 添加 eslint-pulgn-jest 到 eslint 配置
+  ```
+  module.exports = {
+    extends: [
+      'plugin:jest/recommended'
+    ],
+  }
+  ```
+### 执行单元测试
+* package.json 文件的 scripts 中，添加一条单元测试命令： "test": "jest"。
+
+### husky 约束 git push
+* 创建 pre-push
+  ```
+  #!/bin/sh
+  . "$(dirname "$0")/_/husky.sh"
+
+  npm run test 
+  ```
+* 执行单元测试 case 完全通过后, 允许 push 到远程
