@@ -32,5 +32,4 @@ export default defineConfig({
       }
     }
   }
-  /** 设置预处理样式 */
 })

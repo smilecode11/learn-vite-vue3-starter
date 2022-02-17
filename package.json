@@ -8,6 +8,8 @@
     "build": "vue-tsc --noEmit && vite build",
     "build:dev": "vue-tsc --noEmit && vite build --mode development",
     "build:prod": "vue-tsc --noEmit && vite build --mode production",
+    "build1":"vite build",
+    "build1:prod":"vite build --mode production",
     "preview": "vite preview",
     "prepare": "husky install",
     "test": "jest"

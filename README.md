@@ -156,3 +156,9 @@
   npm run test 
   ```
 * 执行单元测试 case 完全通过后, 允许 push 到远程
+
+## 自动部署
+### 创建 github token 
+  `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`
+
+### 创建 Actions 配置文件
