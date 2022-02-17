@@ -4,24 +4,25 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from "vue";
-import { usePageTitle } from "../hooks/usePageTitle";
+import { defineComponent } from 'vue'
+import { usePageTitle } from '@/hooks/usePageTitle'
+
 export default defineComponent({
   setup() {
-    const pageTitle = usePageTitle();
+    const pageTitle = usePageTitle()
+
     return {
-      pageTitle,
-    };
-  },
-});
+      pageTitle
+    }
+  }
+})
 </script>
 
 <style lang="scss" scoped>
 // vite 集成了 scss-loader, 无需额外配置
-$danger:red;
-.scss-class{
+$danger: red;
+.scss-class {
   color: $danger;
   background: yellow;
 }
 </style>
-

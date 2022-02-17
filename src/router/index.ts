@@ -1,36 +1,36 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
-import Home from "@/views/home.vue";
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
+import Home from '@/views/home.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: "/",
-    redirect: "/home",
+    path: '/',
+    redirect: '/home'
   },
   {
-    path: "/home",
-    name: "HomePage",
-    component: Home,
+    path: '/home',
+    name: 'Home',
+    component: Home
   },
   {
-    path: "/element-plus",
-    name: "ElementPlus",
-    component: () => import("@/views/element-plus.vue"),
+    path: '/element',
+    name: 'ElementPlus',
+    component: () => import('@/views/element.vue')
   },
   {
-    path: "/axios",
-    name: "Axios",
-    component: () => import("@/views/axios.vue"),
+    path: '/axios',
+    name: 'Axios',
+    component: () => import('@/views/axios.vue')
   },
   {
-    path: "/scss",
-    name: "Scss",
-    component: () => import("@/views/scss.vue"),
-  },
-];
+    path: '/scss',
+    name: 'Scss',
+    component: () => import('@/views/scss.vue')
+  }
+]
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes,
-});
+  routes
+})
 
-export default router;
+export default router

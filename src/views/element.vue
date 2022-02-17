@@ -1,9 +1,7 @@
 <template>
   <h2>{{ pageTitle }}</h2>
-  <!-- 按钮 -->
   <el-button type="primary">Primary</el-button>
   <el-button type="warning">warning</el-button>
-  <!-- 走马灯 -->
   <el-carousel :interval="5000" arrow="always">
     <el-carousel-item v-for="item in 8" :key="item">
       <h3>{{ item }}</h3>
@@ -12,23 +10,22 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import { usePageTitle } from "../hooks/usePageTitle";
+import { defineComponent } from 'vue'
+import { usePageTitle } from '@/hooks/usePageTitle'
 
 export default defineComponent({
+  name: 'element',
   setup() {
-    const pageTitle = usePageTitle();
+    const pageTitle = usePageTitle()
 
     return {
-      pageTitle,
-    };
-  },
-});
+      pageTitle
+    }
+  }
+})
 </script>
 
 <style scoped>
-
-/* 走马灯 */
 .el-carousel__item h3 {
   color: #475669;
   font-size: 18px;
