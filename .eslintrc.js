@@ -23,13 +23,13 @@ module.exports = {
   },
   rules: {
     'no-plusplus': [
-      0,
+      'off',
       {
         allowForLoopAfterthoughts: true
       }
     ],
     'no-param-reassign': [
-      0,
+      'off',
       {
         props: false
       }

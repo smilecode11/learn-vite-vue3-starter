@@ -54,3 +54,32 @@
 * 下载 VSCode 插件 Prettier - Code formatter
 
 ### 集成 ESLint 配置
+* 全局安装 `npm i -g eslint`
+* 下载 VSCode 插件 Eslint
+* 创建 .eslintrc.js 填写配置
+* 创建工具区 .settings.json, 设置代码自动校正
+  ```
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+  ```
+
+### 继承 husky 和 lint-staged
+> 制定规则, 通过方执行 git commit
+* 安装 husky —— Git Hook 工具，可以设置在 git 各个阶段（pre-commit、commit-msg、pre-push 等）触发我们的命令。
+  * 修改生成的 .husky 文件下 pre-commit 钩子, 即 git commit 前做文件校验工作
+    ```
+    # lint ./src 下所有文件
+    eslint --fix ./src --ext .vue,.js,.ts
+    ```
+* 安装 lint-staged —— 在 git 暂存的文件上运行 linters。
+  * package.json 添加 
+    ```
+    "lint-staged": {
+      "*.{vue,js,ts}": "eslint --fix"
+    }
+    ```
+  * 修改 husky pre-commit 钩子
+    ```
+    npx lint-staged
+    ```
