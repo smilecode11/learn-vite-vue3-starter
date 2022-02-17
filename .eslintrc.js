@@ -22,7 +22,24 @@ module.exports = {
     }
   },
   rules: {
-    'no-console': ['warn', { allow: ['warn', 'error'] }],
+    'no-plusplus': [
+      0,
+      {
+        allowForLoopAfterthoughts: true
+      }
+    ],
+    'no-param-reassign': [
+      0,
+      {
+        props: false
+      }
+    ],
+    'no-console': [
+      'warn',
+      {
+        allow: ['warn', 'error']
+      }
+    ],
     'class-methods-use-this': ['off'],
     'vue/multi-word-component-names': ['off'],
     'vue/no-multiple-template-root': ['off'],

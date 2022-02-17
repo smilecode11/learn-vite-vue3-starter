@@ -3,18 +3,19 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from "vue";
+import { defineComponent } from 'vue'
+
 export default defineComponent({
   props: {
     msg: {
       type: String,
-      default: "",
-    },
+      default: ''
+    }
   },
   setup() {
-    return {};
-  },
-});
+    return {}
+  }
+})
 </script>
 
 <style scoped>

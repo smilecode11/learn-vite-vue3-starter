@@ -1,6 +1,9 @@
-import { useRoute } from "vue-router";
+import { useRoute } from 'vue-router'
 
-export function usePageTitle() {
-  const route = useRoute();
-  return route.name;
+const usePageTitle = () => {
+  const route = useRoute()
+  return route.name
 }
+
+export default usePageTitle
+export { usePageTitle }

@@ -1,31 +1,31 @@
-import { createStore } from "vuex";
+import { createStore } from 'vuex'
 
 const defaultState = {
-  count: 0,
-};
+  count: 0
+}
 
 const store = createStore({
   state() {
-    return defaultState;
+    return defaultState
   },
   mutations: {
     increment(state: typeof defaultState) {
-      state.count++;
+      state.count++
     },
     decrement(state: typeof defaultState) {
-      state.count--;
-    },
+      state.count--
+    }
   },
   actions: {
     increment(context) {
-      context.commit("increment");
-    },
+      context.commit('increment')
+    }
   },
   getters: {
     doubleCount(state: typeof defaultState) {
-      return state.count * 2;
-    },
-  },
-});
+      return state.count * 2
+    }
+  }
+})
 
-export default store;
+export default store
