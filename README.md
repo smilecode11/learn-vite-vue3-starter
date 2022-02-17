@@ -65,7 +65,7 @@
   }
   ```
 
-### 继承 husky 和 lint-staged
+### 集成 husky 和 lint-staged
 > 制定规则, 通过方执行 git commit
 * 安装 husky —— Git Hook 工具，可以设置在 git 各个阶段（pre-commit、commit-msg、pre-push 等）触发我们的命令。
   * 修改生成的 .husky 文件下 pre-commit 钩子, 即 git commit 前做文件校验工作
@@ -86,9 +86,22 @@
     ```
 
 ## 提交规范
-### 提交规范
-
 ### 集成 Commitizen 实现规范提交
 > Commitizen 是一个帮助撰写规范 commit message 的工具。它有一个命令行工具 cz-cli。
-* 安装 `cnpm install commitizen -D`
+* 安装 `cnpm install commitizen -D`, 并全局安装 `commitizen`
 * 修改 package.json `config.commitizen`
+    ```
+    "config": {
+      "commitizen": {
+        "path": "./node_modules/cz-customizable"
+      }
+    }
+    ```
+
+### 集成 commitlint 验证提交规范
+* 安装 `npm i @commitlint/config-conventional @commitlint/cli -D`
+* 创建 commitlint.config.js 文件, 填写内容
+  ```
+  module.exports = { extends: ['@commitlint/config-conventional'] }
+  ```
+* 使用 husky 的 commit-msg hook 触发验证提交信息的命令
