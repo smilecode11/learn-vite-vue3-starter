@@ -9,6 +9,7 @@
     |-components/   公共组件目录
     |-router/   路由配置目录
     |-store/    状态管理目录
+    |-models/ 请求目录
     |-style/    通用 css 目录
     |-utils/    工具函数目录
     |-views/    页面目录
@@ -83,3 +84,11 @@
     ```
     npx lint-staged
     ```
+
+## 提交规范
+### 提交规范
+
+### 集成 Commitizen 实现规范提交
+> Commitizen 是一个帮助撰写规范 commit message 的工具。它有一个命令行工具 cz-cli。
+* 安装 `cnpm install commitizen -D`
+* 修改 package.json `config.commitizen`
