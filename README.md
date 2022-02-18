@@ -2,6 +2,7 @@
 [学习参考文献 https://juejin.cn/post/6951649464637636622#heading-4](https://juejin.cn/post/6951649464637636622#heading-4)
 
 ## 项目结构目录
+```
 |-public
 |-src/ 
     |-assets/   静态资源目录
@@ -21,7 +22,7 @@
 |-tsconfig.json //  TypeScript 配置文件
 |-vite.config.ts    //  vite 配置文件
 |-package.json
-
+```
 ## 架构搭建
 ### 集成路由工具 Vue Router
 * Vue Router 基础使用
