@@ -88,7 +88,7 @@
 ## 提交规范
 ### 集成 Commitizen 实现规范提交
 > Commitizen 是一个帮助撰写规范 commit message 的工具。它有一个命令行工具 cz-cli。
-* 安装 `cnpm install commitizen -D`, 并全局安装 `commitizen`
+* 安装 `cnpm i -D cz-customizable `, 并全局安装 `cnpm i -g commitizen`
 * 修改 package.json `config.commitizen`
     ```
     "config": {
@@ -97,6 +97,8 @@
       }
     }
     ```
+* 创建 .cz-config.js 写入格式
+* 提交 commit 改用 git cz 执行即可
 
 ### 集成 commitlint 验证提交规范
 * 安装 `npm i @commitlint/config-conventional @commitlint/cli -D`
